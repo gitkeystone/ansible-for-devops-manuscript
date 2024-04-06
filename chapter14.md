@@ -1,3 +1,4 @@
+
 # Chapter 14 - Automating HTTPS and TLS Certificates
 
 Today's application environment almost always requires the use of HTTP (and HTTPS) for certain traffic---end users interacting with a website, microservices communicating with each other internally or via the public Internet, or external APIs interacting with your apps.
@@ -118,13 +119,13 @@ roles:
 Then run `ansible-galaxy install -r requirements.yml` to install the roles.
 
 T> In most cases, you should create an `ansible.cfg` in the playbook directory, with at least the following contents:
-T> 
+T>
 T> {lang="text",linenos=off}
 T> ~~~
 T> [defaults]
 T> roles_path = ./roles
 T> ~~~
-T> 
+T>
 T> This way, role dependencies are installed inside the playbook directory itself instead of in your system-wide roles directory (as long as you run the `ansible-galaxy` command inside the playbook directory).
 
 Now let's define a few variables to make the `firewall`, `pip`, and `nginx` roles configure things how we want:

@@ -165,7 +165,7 @@ Let's build an example playbook, and lint it to see if there are any errors:
 
   tasks:
     - name: Register the output of the 'uptime' command.
-      command: uptime 
+      command: uptime
       register: system_uptime # comment
 
     - name: Print the registered output of the 'uptime' command.

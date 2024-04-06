@@ -1,3 +1,15 @@
+- [Chapter 12 - Automating Your Automation with Ansible Tower and CI/CD](#chapter-12---automating-your-automation-with-ansible-tower-and-cicd)
+    - [Installing Ansible AWX](#installing-ansible-awx)
+    - [Using AWX](#using-awx)
+    - [Uninstalling AWX](#uninstalling-awx)
+    - [Other Tower Features of Note](#other-tower-features-of-note)
+    - [Tower Alternatives](#tower-alternatives)
+  - [Jenkins CI](#jenkins-ci)
+    - [Build a local Jenkins server with Ansible](#build-a-local-jenkins-server-with-ansible)
+    - [Create an Ansible playbook on the Jenkins server](#create-an-ansible-playbook-on-the-jenkins-server)
+    - [Create a Jenkins job to run an Ansible Playbook](#create-a-jenkins-job-to-run-an-ansible-playbook)
+  - [Summary](#summary)
+
 # Chapter 12 - Automating Your Automation with Ansible Tower and CI/CD
 
 At this point, you should be able to convert almost any bit of your infrastructure's configuration into Ansible playbooks, roles, and inventories.
@@ -51,7 +63,7 @@ Once AWX is initialized, you should be able to log in using the default credenti
 ![AWX's Dashboard](images/12-awx-dashboard.png)
 
 I> *What's up with the irate potato?* Apparently it's an inside joke. Sometimes when using AWX you'll see the 'AWX with Wings' logo, which as far as I can tell has its roots as one of the original logos of the 'AnsibleWorks' organization that eventually became Ansible, Inc. and is part of Red Hat today. But other times you'll see the Angry Spud. 'Angry Spud,' 'Rage Tater,' and 'The Starchy Miracle' are some internal nicknames for our potato friend.
-I> 
+I>
 I> Like Ansible's tendency to wrap output in `cowsay` if you have it installed, some of these strange but fun quirks make using Ansible tools more fun by giving them personality---at least in the author's opinion.
 
 ### Using AWX
@@ -264,7 +276,7 @@ Once the page loads, click the 'New Item' link to create a new 'Freestyle projec
     ~~~
     # Force Ansible to output jobs with color.
     export ANSIBLE_FORCE_COLOR=true
-    
+
     # Run the local test playbook.
     ansible-playbook /opt/ansible-for-devops/main.yml
     ~~~
